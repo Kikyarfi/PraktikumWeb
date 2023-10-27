@@ -1,0 +1,135 @@
+* {
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Times New Roman';
+    background-color: white;
+    display: grid;
+    grid-template-rows: 80px auto 80px; /* Membagi halaman menjadi tiga bagian: header, konten, dan footer */
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "content"
+        "footer";
+}
+
+.tampilan {
+    width: 1100px;
+    margin: auto;
+    position: relative;
+    grid-area: content; /* Mengatur area elemen wrapper */
+}
+
+.foto {
+    margin-top: 50px;
+    margin-bottom: 40spx;
+    height: 340px;
+    width: 200px;
+    margin-right: 150px;
+    grid-area: content; /* Mengatur area elemen foto */
+}
+
+.logo a {
+    font-size: 30px;
+    font-weight: 800;
+    float: left;
+    font-family: 'Times New Roman';
+    color: black;
+    grid-area: header; /* Mengatur area elemen logo */
+}
+
+.menu {
+    float: right;
+}
+
+nav {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    line-height: 80px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background: rgb(191, 191, 237);
+    z-index: 1;
+    border-bottom: 1px solid #364f6b;
+    grid-area: header; /* Mengatur area elemen nav */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    padding: 0px 16px 0px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.kolom .deskripsi {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Times New Roman';
+    color: black;
+}
+
+.kolom .deskripsi2, .kolom .deskripsi3, .kolom .deskripsi4 {
+    font-size: 20px;
+    font-family: 'Times New Roman';
+    color: black;
+}
+
+h2 {
+    font-family: 'Times New Roman';
+    font-weight: bolder;
+    font-weight: 800;
+    font-size: 45px;
+    color: black;
+    margin-bottom: 20px;
+    width: 100%;
+    line-height: 50px;
+    grid-area: content; /* Mengatur area elemen h2 */
+}
+
+p {
+    margin: 10px 0px 10px 0px;
+    padding: 10px 0px 10px 0px;
+}
+
+.footer {
+    grid-area: footer; /* Mengatur area elemen footer */
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer {
+    background-color: rgb(191, 191, 237);
+    height: 8vh;
+    width: 100vw;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,198 @@
+body, html, ul, li {
+    padding: 0; /*mengatur jarak ke dalam*/
+    margin: 0; /* mengatur jarak ke luar*/
+}
+
+nav {
+    background-color: #6b7175;
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    justify-content: space-between;
+}
+
+.logo > img {
+    width: 100px;
+    height: 77px;
+}
+
+h1 {
+    margin-left: 50px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+/* navbar css */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    display: inline;
+    position: relative;
+}
+
+ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: all ease-in-out 0.5s;
+    color: white;
+}
+
+ul li a:hover {
+    background-color: #555;
+    transition: all ease-in-out 0.5s;
+}
+
+ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    transition: all ease-in-out 0.5s;
+}
+
+ul li:hover ul {
+    display: block;
+    transition: all ease-in-out 0.5s;
+}
+
+ul li ul li {
+    display: block;
+    transition: all ease-in-out 0.5s;
+}
+
+ul li ul li a {
+    padding: 10px 15px;
+    color: white;
+}
+
+span {
+    display: flex;
+    padding: 40px;
+    transition: all ease-in-out 0.5s;
+    justify-content: center;
+    align-items: center;
+}
+
+span > img {
+    margin-top: 100px;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    width: 200px;
+    height: 240px;
+    transition: all ease-in-out 0.5s;
+    border-radius: 50px;
+}
+
+span > img:hover {
+    width: 1000px;
+    height: 400px;
+    transition: all ease-in-out 0.5s;
+    border-radius: 50px;
+}
+
+.konten {
+    height: 375px;
+    width: 100vw;
+    padding: 0;
+    display: flex;
+}
+
+.tulisan {
+    margin-left: 270px;
+    margin-top: 120px;
+    height: 250px;
+    width: 200px;
+    margin-right: 150px;
+}
+.text1{
+    margin-left: 150px;
+    text-align: justify;
+    width: 900px;
+    margin-top: 20px ;
+    
+}
+body, html, ul, li{
+    padding: 0; /*mengatur jarak ke dalam*/
+    margin: 0; /* mengatur jarak ke luar*/
+}
+.satu, .dua, .tiga {
+    margin-bottom: 10px;
+}
+
+/* footer */
+footer {
+    background-color: black;
+    height: 8vh;
+    width: 100vw;
+    color: white;
+    display: flex;
+    font-style: italic;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+/* untuk form */
+section {
+    text-align: center;
+    background-image: url('coffee1.jpg');
+    background-size: 500px;
+    height: 500px;
+    width: 100vw;
+}
+.tulisan2 {
+    color: white;
+}
+form {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px transparent;
+    border-radius: 5px;
+    background-color: transparent;
+}
+label {
+    font-weight: bolders;
+    color: white;
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+}
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px 10px 10px 5px;
+    margin: 2px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+textarea {
+    resize: vertical; /* Biarkan pengguna menyesuaikan ketinggian textarea */
+}
+input[type="submit"] {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}

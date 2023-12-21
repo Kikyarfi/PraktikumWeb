@@ -1,0 +1,108 @@
+nav {
+    background-color: rgb(167, 167, 243);
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    justify-content: space-between;
+}
+
+/* navbar css (Contact) */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    display: inline;
+    position: relative;
+}
+
+ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 15px;
+    color: white;
+}
+
+ul li a:hover {
+    background-color: rgb(167, 167, 243);
+}
+
+ul li ul {
+    display: none;
+    position: absolute;
+    background-color: rgb(167, 167, 243);
+}
+
+ul li:hover ul {
+    display: block;
+}
+
+ul li ul li {
+    display: block;
+}
+
+ul li ul li a {
+    padding: 10px 15px;
+    color: white;
+}
+
+h1 {
+    margin-left: 200px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    margin-right: 50px;
+}
+
+body, html, ul, li {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.konten1 {
+    height: 300px;
+    width: 100vw;
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.tulisan {
+    margin-left: 50px;
+}
+
+.satu {
+    font-weight: bold ;
+    font-size: large;
+    width: 110px; /* Ganti dengan lebar yang diinginkan */
+    height: 70px; /* Ganti dengan tinggi yang diinginkan */
+    background-color: #f2f2f2; /* Warna latar belakang */
+    border-radius: 50%; /* Membuatnya menjadi lingkaran oval */
+    text-align: center; /* Menengahkan teks di dalam lingkaran oval */
+    padding: 5px; /* Memberikan ruang di dalam lingkaran oval */
+}
+
+.konten2 {
+    margin-left: 40px;
+} 
+
+.b1, .b2, .b3 {
+    margin-top: 10px;
+}

@@ -1,0 +1,39 @@
+.container {
+  display: grid;
+  grid-template-rows: 100px 300px 100px;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas:   
+    'header header'
+    'main aside'
+    'footer footer';
+  gap: 10px; /* Menambahkan jarak antara grid items */
+  margin: 20px; /* Memberikan margin agar tampilan lebih rapi */
+}
+
+.header {
+  grid-area: header;
+  background-color: grey;
+  color: white;
+  padding: 10px;
+}
+
+.aside {
+  grid-area: aside;
+  background-color: crimson;
+  color: white;
+  padding: 10px;
+}
+
+.main {
+  grid-area: main;
+  background-color: brown;
+  color: white;
+  padding: 10px;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: chocolate;
+  color: white;
+  padding: 10px;
+}

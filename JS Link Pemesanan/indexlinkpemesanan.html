@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="stylelinkpemesanan.css">
+<head>
+    <title>Pemesanan Makanan</title>
+</head>
+<body>
+    <h1>Pemesanan Makanan</h1>
+
+    <form id="pesananForm">
+        <label for="makanan">Makanan: </label>
+        <select id="makanan"s>
+            <option value="nasi-goreng">Nasi Goreng</option>
+            <option value="mie-ayam">Mie Ayam</option>
+            <option value="sate-ayam">Sate Ayam</option>
+            <option value="rendang">Rendang</option>
+        </select><br><br>
+
+        <label for="jumlah">Jumlah Pesanan: </label>
+        <input type="text" id="jumlah"><br><br>
+
+        <label for="voucher">Voucher: </label>
+        <input type="text" id="voucherInput"><br><br>
+
+        <button type="button" onclick="hitungPesanan()">Hitung Pesanan</button><br><br>
+
+        <div id="hasil">
+            <p>Nama Pesanan: <span id="namaPesananOutput"></span></p>
+            <p>Jumlah Pesanan: <span id="jumlahPesananOutput"></span></p>
+            <p>Total Diskon: <span id="totalDiskonOutput"></span></p>
+            <p>Total Harga: <span id="totalHargaOutput"></span></p>
+        </div>
+    </form>
+
+    <script>
+        function hitungPesanan() {
+            var selectedMakanan = document.getElementById("makanan").selectedOptions;
+            var makananList = [];
+            for (var i = 0; i < selectedMakanan.length; i++) {
+                makananList.push(selectedMakanan[i].value);
+            }
+
+            var jumlah = parseInt(document.getElementById("jumlah").value);
+            var voucherInput = document.getElementById("voucherInput").value;
+
+            var validVoucher = false;
+
+            // Periksa apakah voucher sesuai
+            if (voucherInput === "KIKYGANTENG" || voucherInput === "KIKYARFI") {
+                validVoucher = true;
+            }
+
+            if (!validVoucher) {
+                alert("Voucher tidak valid");
+                return;
+            }
+
+            var totalHarga = 0;
+            var diskon = 0;
+
+            for (var i = 0; i < makananList.length; i++) {
+                var hargaMakanan;
+                switch (makananList[i]) {
+                    case "nasi-goreng":
+                        hargaMakanan = 10000;
+                        break;
+                    case "mie-ayam":
+                        hargaMakanan = 15000;
+                        break;
+                    case "sate-ayam":
+                        hargaMakanan = 20000;
+                        break;
+                    case "rendang":
+                        hargaMakanan = 10000;
+                        break;
+                    default:
+                        hargaMakanan = 0;
+                }
+                totalHarga += hargaMakanan * jumlah;
+            }
+
+            if (voucherInput === "KIKYGANTENG") {
+                diskon = totalHarga * 0.1;
+            } else if (voucherInput === "KIKYARFI") {
+                diskon = totalHarga * 0.2;
+            } 
+
+            var totalDiskon = diskon.toFixed(2);
+            var namaPesanan = makananList.join(", ").replace(/-/g, " ").toUpperCase();
+
+            // Tampilkan hasil
+            document.getElementById("namaPesananOutput").textContent = namaPesanan;
+            document.getElementById("jumlahPesananOutput").textContent = jumlah * makananList.length;
+            document.getElementById("totalDiskonOutput").textContent = "Rp" + totalDiskon;
+            document.getElementById("totalHargaOutput").textContent = "Rp" + (totalHarga - diskon);
+        }
+    </script>
+</body>
+</html>
